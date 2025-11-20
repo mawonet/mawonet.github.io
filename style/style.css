@@ -23,7 +23,9 @@ body {
 /*section {*/
 /*    height: max-content;*/
 /*}*/
-
+a {
+    color: cornflowerblue;
+}
 .container {
     max-width: 900px;
     width: 100%;
