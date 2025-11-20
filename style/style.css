@@ -20,9 +20,9 @@ body {
     padding: 20px;
 }
 
-section {
-    height: max-content;
-}
+/*section {*/
+/*    height: max-content;*/
+/*}*/
 
 .container {
     max-width: 900px;
