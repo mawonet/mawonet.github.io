@@ -1,173 +1,375 @@
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style/style.css">
-    <title>Aliaksandr Burshtyn CV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Aliaksandr Burshtyn</title>
+
+    <!-- Font Awesome для иконки дискеты -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Сброс стилей для точного соответствия */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif; /* Классический шрифт как на фото */
+            line-height: 1.3;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .resume-page {
+            max-width: 850px; /* Стандартная ширина листа A4 */
+            margin: 0 auto;
+            padding: 40px 50px;
+        }
+
+        /* Заголовок */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* Секции */
+        h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        p, li {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        /* Опыт работы и даты */
+        .entry {
+            margin-bottom: 15px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .entry-title-row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .job-title {
+            font-weight: bold;
+        }
+
+        .job-date {
+            font-style: normal;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .job-location {
+            text-align: right;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        .company-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        .stack {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        /* Табличная верстка для языков и образования */
+        .row-flex {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        /* ПЛАВАЮЩАЯ КНОПКА */
+        .fab-download {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+
+        .fab-download:hover {
+            transform: scale(1.1);
+        }
+
+        /* АДАПТИВНОСТЬ */
+        @media (max-width: 600px) {
+            .resume-page {
+                padding: 20px;
+            }
+
+            .entry-title-row, .company-info, .row-flex {
+                flex-direction: column;
+            }
+
+            .job-date, .job-location {
+                text-align: left;
+                font-style: normal;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        a {
+            color: inherit; /* Цвет как у остального текста */
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+<div class="resume-page">
     <header>
-        <div class="photo-wrapper">
-            <img src="files/ln.png" alt="Фото" />
-        </div>
-        <div class="header-info">
-            <h1 class="name">Aliaksandr Burshtyn</h1>
-            <p class="position">Backend Software Engineer</p>
-            <div class="contacts">
-                <div>mawonet@gmail.com</div>
-                <a href="https://t.me/mawonet" style="" target="_blank" rel="noopener noreferrer"> Telegram: @mawonet </a>
-                <a href="http://www.linkedin.com/in/mawonet" target="_blank"> LinkedIn </a>
-                <div>+375 29 202 95 01</div>
-                <div>Belarus</div>
-            </div>
-        </div>
-        <div class="header-right">
-            <a href="files/CV_AB_02_26.pdf" download class="download-btn" title="download CV" aria-label="download CV">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 20h14v-2H5v2zm7-18l-5 5h3v6h4v-6h3l-5-5z"/>
-                </svg>
-            </a>
+        <h1>Aliaksandr Burshtyn</h1>
+        <div class="contact-info">
+            <a href="tel:+375-29-202-95-01">+375-29-202-95-01</a> | <a href="mail:mawonet@gmail.com">mawonet@gmail.com</a> | <a href="https://linkedin.com/in/mawonet" target="_blank">linkedin.com/in/mawonet </a> | <a href="https://github.com/mawonet" target="_blank" >github.com/mawonet</a> | <a href="https://t.me/mawonet" target="_blank">t.me/mawonet</a>
         </div>
     </header>
 
-    <div class="left-column">
-        <section class="skills">
-            <h2>Skills</h2>
+    <section>
+        <h2>SUMMARY</h2>
+        <p>Backend Engineer with over 9 years of experience specializing in high-load web applications, financial systems, and real-time data analytics. Expert in the PHP ecosystem (+ Yii2) and database management (MySQL, MongoDB, Redis). Proven track record in refactoring legacy architectures, optimizing complex algorithms, and designing scalable RESTful APIs. Strong focus on code quality and delivering technical solutions that align with business objectives.</p>
+    </section>
+
+    <section>
+        <h2>TECHNICAL SKILLS</h2>
+        <p><strong>Languages:</strong> PHP (5.6 – 8.x), JavaScript (ES6+), TypeScript, SQL</p>
+        <p><strong>Frameworks, Runtimes:</strong> Yii2, Yii3 (Basic), Node.js (Express)</p>
+        <p><strong>Databases, Caching:</strong> MySQL, MongoDB, Redis</p>
+        <p><strong>API, Testing:</strong> RESTful API design, Swagger, PHPUnit</p>
+        <p><strong>Developer Tools:</strong> Git (GitLab, GitHub, BitBucket), Docker, PHPStorm, VS Code, CI/CD, Linux, Jira, YouTrack, Postman, Heroku, Exact, DO</p>
+        <p><strong>Frontend (Basic):</strong> React, jQuery, AJAX, Bootstrap</p>
+    </section>
+
+    <section>
+        <h2>EXPERIENCE</h2>
+
+        <!-- Job 1 -->
+        <div class="entry">
+            <div class="entry-title-row">
+                <span class="job-title">Backend Software Engineer</span>
+                <span class="job-date">May 2025 — Present</span>
+            </div>
+            <div class="company-info">
+                <span>Freelance/Part-time</span>
+                <span>Remote</span>
+            </div>
+            <div class="stack">Stack: PHP 8.x, Yii2, MySQL, JS, Swagger, React, Linux, GitLab</div>
             <ul>
-                <li>PHP (5.6 - 8.x)</li>
-                <li>Yii/Yii2(main)</li>
-                <li>Laravel(basic)</li>
-                <li>Symfony(basic)</li>
-                <hr>
-                <li>SQL(Mysql)</li>
-                <li>NoSQL(MongoDB)</li>
-                <li>JavaScript(TypeScript)</li>
-                <li>Node.js(express)</li>
-                <li>REST</li>
-                <li>Swagger</li>
-                <hr>
-                <li>PHPUnit</li>
-                <li>Redis</li>
-                <li>Git</li>
-                <li>CI/CD</li>
-                <li>HTML, CSS, JQuery, AJAX, Bootstrap</li>
+                <li>Architected and implemented a real-time data recording and analysis system for a sports analytics service</li>
+                <li>Engineered the server-side logic for an order management dashboard</li>
+                <li>Redesigned the database architecture for sports ground booking systems to improve data consistency and scalability</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="tools">
-            <h2>Tools</h2>
+        <!-- Job 2 -->
+        <div class="entry">
+            <div class="entry-title-row">
+                <span class="job-title">Backend Software Engineer</span>
+                <span class="job-date">Jan 2025 — May 2025</span>
+            </div>
+            <div class="company-info">
+                <span>Livemaster — Contract</span>
+                <span>Remote</span>
+            </div>
+            <div class="stack">Stack: PHP, MySQL, React, Linux, GitLab</div>
             <ul>
-                <li>PHPStorm</li>
-                <li>Postman</li>
-                <li>VSCode</li>
-                <li>GitLab/GitHub/BitBucket</li>
-                <li>Jira/YouTrack</li>
-                <li>Heroku</li>
-                <li>Exact</li>
-                <li>DO</li>
-                <li>.and much more</li>
+                <li>Optimized financial transaction workflows in a C2C marketplace, ensuring high accuracy and security</li>
+                <li>Designed and implemented a scalable bonus/loyalty system to increase user engagement</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="languages">
-            <h2>Languages</h2>
+        <!-- Job 3 -->
+        <div class="entry">
+            <div class="entry-title-row">
+                <span class="job-title">Backend Software Engineer</span>
+                <span class="job-date">Jan 2024 — Jan 2025</span>
+            </div>
+            <div class="company-info">
+                <span>SportSoft</span>
+                <span>Remote</span>
+            </div>
+            <div class="stack">Stack: PHP 7.x-8.x, Yii2, MySQL, JS, TS, Redis, React, AI integration, GitHub</div>
             <ul>
-                <li>Belarusian, Russian - native</li>
-                <li>English - B1</li>
+                <li>Developed backend modules for diverse sports-tech solutions, focusing on high-performance data processing</li>
+                <li>Refined statistical calculation algorithms, improving the speed and accuracy of complex data reporting</li>
+                <li>Performed extensive refactoring and performance optimization of core modules</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="education">
-            <h2>Education</h2>
-            <p><strong>BSTU</strong>, Bachelor's Degree, 2012–2017, Automated systems of information processing</p>
-        </section>
+        <!-- Job 3 -->
+        <div class="entry">
+            <div class="entry-title-row">
+                <span class="job-title">Backend Software Engineer</span>
+                <span class="job-date">Apr 2023 — Jul 2023</span>
+            </div>
+            <div class="company-info">
+                <span>Myfin - Contract</span>
+                <span>Minsk, Belarus</span>
+            </div>
+            <div class="stack">Stack: PHP, Yii, Yii2, MySQL, REST, Linux, GitHu</div>
+            <ul>
+                <li>Developed new features for a large-scale financial platform with diverse banking functionalities</li>
+                <li>Implemented new architectural solutions and conducted rigorous code reviews to ensure high-quality standards</li>
+                <li>Modernized legacy components through strategic refactoring</li>
+            </ul>
+        </div>
 
-<!--        <section class="other">-->
-<!--            <h2>other</h2>-->
-<!--            <ul>-->
-<!--                <li>item</li>-->
-<!--            </ul>-->
-<!--        </section>-->
-    </div>
+        <!-- Job 3 -->
+        <div class="entry">
+            <div class="entry-title-row">
+                <span class="job-title">Backend Software Engineer</span>
+                <span class="job-date">Apr 2022 — Jan 2023</span>
+            </div>
+            <div class="company-info">
+                <span>iContext</span>
+                <span>Minsk, Belarus</span>
+            </div>
+            <div class="stack">Stack: PHP 8.1, Yii2, Redis, MySQL, REST, Swagger, Linux, GitLab</div>
+            <ul>
+                <li>Contributed to a large-scale digital control system by developing new features and implementing scalable architectural patterns</li>
+                <li>Optimized system performance through efficient Redis caching and database query tuning</li>
+            </ul>
+        </div>
 
-    <div class="right-column">
-        <section class="summary" style=" height: auto;">
-            <h2>Summary</h2>
-            <p>
-                I have extensive experience in the field of information technology, specializing in software development as a backend developer. I'm focused on career growth and constantly strive for professional excellence. My programming skills in database management and coding are well-developed, reflecting my technical expertise and creative potential. I actively keep up with the latest trends in technology and seek to further develop my skills to achieve business goals.
-            </p>
-        </section>
+        <!-- Job 4 (NDA) -->
+        <div class="entry">
+            <div class="entry-title-row">
+                <span class="job-title">Backend Software Engineer</span>
+                <span class="job-date">Nov 2021 — Apr 2022</span>
+            </div>
+            <div class="company-info">
+                <span>NDA — Contract</span>
+                <span>Belarus</span>
+            </div>
+            <div class="stack">Stack: PHP 7.4, JS, MySQL, REST, Linux</div>
+            <ul>
+                <li>Developed APIs and analytics tools for retrieving and processing data from IoT/electrical devices</li>
+                <li>Designed and implemented robust architectural solutions for real-time data processing</li>
+            </ul>
+        </div>
 
-        <section class="experience">
-            <h2>Experience</h2>
-            <h6>(above 9 years)</h6>
-            <div class="experience-item">
-                <h3>Part-time/Freelance, Backend Software Engineer</h3>
-                <span>May 2025 - present</span><br>
-                <span>Full-time; Belarus; Remote</span><br>
-                <span>PHP 8.x, Yii2, MYSQL, JS, Swagger, Jira, linux, gitlab, git, React</span><br>
-                <ul style="list-style-type: disc; padding-left: 1em; padding-top: 1em;">
-                    <li>Development of a system for recording and analyzing sports match data for an analytics service.<br>
-                    <li>Development of the server side of the order dashboard.<br>
-                    <li>Changing the architecture of order storage in the booking of sports grounds.<br>
-                </ul>
+        <!-- Job 5 -->
+        <div class="entry">
+            <div class="entry-title-row">
+                <span class="job-title">Backend Software Engineer</span>
+                <span class="job-date">Sep 2018 — Sep 2021</span>
             </div>
-            <div class="experience-item">
-                <h3>Livemaster, Backend Software Engineer</h3>
-                <span>Jan 2025 – May 2025</span><br>
-                <span>Full-time; Minsk, Belarus; Remote</span><br>
-                <span>PHP, MYSQL, Jira, linux, gitlab, git(submodule), React</span><br>
-                <p>C2C marketplace. Fixed bugs in financial transactions. Designed bonus system</p>
+            <div class="company-info">
+                <span>TagFul</span>
+                <span>Brest, Belarus</span>
             </div>
-            <div class="experience-item">
-                <h3>SportSoft, Backend Software Engineer</h3>
-                <span>Jan 2024 – Nov 2024</span><br>
-                <span>Full-time; Remote</span><br>
-                <span>PHP(7.x - 8.x), Yii2, MYSQL, JS, TS, Swagger, React, Redis, Youtrack, linux, git, React, virtual machine, ai</span><br>
-                <p>Development of the server part for various sports solutions. Refinement of modules and statistics systems,development of algorithms for various forms of data calculation. Refactoring and optimization.</p>
+            <div class="stack">Stack: PHP 7.4, Yii2, JS, MySQL, REST, Git</div>
+            <ul>
+                <li>Developed backend functionality for European auction systems and trading platforms</li>
+                <li>Integrated third-party accounting and financial APIs to automate transaction workflows</li>
+            </ul>
+        </div>
+
+        <!-- Job 6 -->
+        <div class="entry">
+            <div class="entry-title-row">
+                <span class="job-title">Backend Software Engineer</span>
+                <span class="job-date">Sep 2017 — Sep 2018</span>
             </div>
-            <div class="experience-item">
-                <h3>Myfin, Backend Software Engineer</h3>
-                <span>Apr 2023 – Jul 2023</span><br>
-                <span>Full-time; Minsk, Belarus; On-site</span><br>
-                <span>PHP, YII, YII2, JS, MYSQL, REST, Jira, linux, git</span><br>
-                <p>Financial resource with extensive and diverse banking functionality. Development of new features, refactoring, implementation of new architectural solutions, Code Review, documentation</p>
+            <div class="company-info">
+                <span>SmartexLab</span>
+                <span>Brest, Belarus</span>
             </div>
-            <div class="experience-item">
-                <h3>iContext, Backend Software Engineer</h3>
-                <span>Apr 2022 – Dec 2022</span><br>
-                <span>Full-time; Minsk, Belarus; On-site</span><br>
-                <span>PHP 8.1, YII2, swagger, redis, JS, MYSQL, REST, Jira, linux, git</span><br>
-                <p>Large control system in digital domain. Development of new features, refactoring, implementation of new architectural solutions, Code Review, documentation</p>
+            <div class="stack">Stack: Node.js, Express, Nest.js, JS, TS, Git</div>
+            <ul>
+                <li>Contributed to the development of a WebRTC-based browser calling solution</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>LANGUAGES</h2>
+        <div class="row-flex">
+            <span><strong>English</strong></span>
+            <span>B1</span>
+        </div>
+        <div class="row-flex">
+            <span>Belarusian, Russian</span>
+            <span>Native</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>EDUCATION</h2>
+        <div class="entry">
+            <div class="entry-title-row">
+                <span class="job-title">Brest State Technical University</span>
+                <span class="job-date">Jul 2012 — Jul 2017</span>
             </div>
-            <div class="experience-item">
-                <h3>(NDA), Backend Software Engineer</h3>
-                <span>Nov 2021 – Apr 2022</span><br>
-                <span>Full-time; Belarus; On-site</span><br>
-                <span>PHP 7.4, JS, MYSQL, REST, linux, git</span><br>
-                <p>Developing API and analytics tools for retrieving data from electrical devices. Development of new features, refactoring, implementation of new architectural solutions, Code Review, documentation</p>
-            </div>
-            <div class="experience-item">
-                <h3>TagFul, Backend Software Engineer</h3>
-                <span>Sep 2018 – Sep 2021</span><br>
-                <span>Full-time; Brest,Belarus; Hybrid</span><br>
-                <span>PHP 7.4, Yii2, JS, MYSQL, REST, git</span><br>
-                <p>Developing new functionality for European auction systems, integrating accounting APIs, and financial systems. Development of new technical solutions for a trading platform</p>
-            </div>
-            <div class="experience-item">
-                <h3>SmartexLab, Junior Backend Software Engineer</h3>
-                <span>Sep 2017 – Aug 2018</span><br>
-                <span>Full-time; Brest,Belarus; On-site</span><br>
-                <span>JS, TS, node.js, express, nest.js, git</span><br>
-                <p>Project for making calls in the browser</p>
-            </div>
-        </section>
-    </div>
+            <div class="job-location" style="text-align: left; font-style: normal;">Brest, Belarus</div>
+            <p><em>Bachelor's Degree in Automated Information Processing Systems</em></p>
+        </div>
+    </section>
 </div>
+
+<!-- Кнопка Скачать -->
+<a href="files/CV_Aliaksandr_Burshtyn.pdf" class="fab-download" download title="Download PDF">
+    <i class="fas fa-save"></i>
+</a>
 
 </body>
 </html>
